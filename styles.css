@@ -1,0 +1,160 @@
+/* Import Font */
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+}
+
+/* CSS Varibles*/
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+}
+
+/* CSS Reset*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: var(--yellow);
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  max-width: 24rem;
+  padding: 1.5rem;
+  margin: 24px;
+
+  background-color: var(--white);
+  box-shadow: 0.75rem 0.75rem 0 var(--black);
+
+  border: 1px solid black;
+  border-radius: 1.25rem;
+  font-family: "Figtree", sans-serif;
+}
+
+.card__image {
+  border-radius: 0.625rem;
+  width: 100%;
+}
+
+.card__content {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__status {
+  background-color: var(--yellow);
+  width: fit-content;
+  margin-bottom: 0.7rem;
+  padding: 0.3rem 0.75rem;
+
+  border-radius: 0.25rem;
+  font-weight: 800;
+  font-size: 0.875rem;
+}
+
+.card__pub {
+  font-size: 0.875rem;
+  margin-bottom: 0.7rem;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.card__link {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.card__link:hover {
+  color: var(--yellow);
+}
+
+.card__description {
+  color: var(--grey);
+  font-size: 1rem;
+}
+
+.card__author {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.card__avatar {
+  max-width: 2rem;
+}
+
+.card__fullname {
+  font-size: 0.875rem;
+  font-weight: 800;
+  align-self: center;
+}
